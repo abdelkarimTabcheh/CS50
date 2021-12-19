@@ -37,12 +37,18 @@ You need to enter these fields:
     Username: it is check if already exist a user with de same name. Only lowercase characters are accepted. Numbers and symbols are not allowed.
     Password: it is checked to match.
 
+
 ![Screenshot from 2021-12-14 20-30-27](https://user-images.githubusercontent.com/92978761/146683835-22c6a94e-7f75-4fc2-8cdd-9213c2c84513.png)
+
 
 
 2. A login page, will check if the username and password match then creates a session for the user.
 
+
+
 ![Screenshot from 2021-12-14 20-29-59](https://user-images.githubusercontent.com/92978761/146684190-0cce8264-ba81-4874-ad23-edee13f656e1.png)
+
+
 
 
 3.  After logging in, the main screen opens, on it, you will find the date and all the tasks related to that date and the logged-in user. On this screen you can:
@@ -69,3 +75,13 @@ By clicking on the "TASKS" icon in the title, you will be redirected to today's 
 All options are on this home screen. Several icons have been used with images to make them more intuitive and simple to use. Each user will be able to view only their tasks. For this reason, there is a registration of users.
 
 The task will be permanently deleted from the database.
+
+
+
+![Screenshot from 2021-12-19 19-58-54](https://user-images.githubusercontent.com/92978761/146686237-97771b60-d921-4f13-b14b-eb64ef87c2f5.png)
+
+
+
+
+
+
