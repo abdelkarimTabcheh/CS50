@@ -51,37 +51,53 @@ You need to enter these fields:
 
 
 
-3.  After logging in, the main screen opens, on it, you will find the date and all the tasks related to that date and the logged-in user. On this screen you can:
+3/4.  After logging in, the main screen opens, on it, you will find the date and all the tasks related to that date and the logged-in user. On this screen you can:
 
     Registering new tasks:
  You can record all tasks for that day or another day in the "New Task" option. A new screen for this recording will open with two fields: task name and date. The date will be suggested by the date depicted on the home screen. The tasks will be added to the end of the list.
     Prioritize tasks (top task in the list) :
-  Important: Completed tasks are considered.
+  Completed tasks are considered.
 Deprioritizing tasks (below the task in the list) : 
-Important: Completed tasks are considered.
+  Completed tasks are considered.
     Mark "done":
 To finish the task by marking "Done" on the screen.
     Mark Not Done: Reopens the task, and removes the mark on the screen.
-    You can delete tasks:
-The task will be permanently deleted from the database.
 Edit tasks:
  In this option, you can edit the date or name of the task. The same New Task screen will open with the data already filled in.
     Check other day's assignments: you can browse between dates.
     Show only undone tasks.
     View all tasks daily.
 
+    You can delete tasks:
+The task will be permanently deleted from the database.
+
 By clicking on the "TASKS" icon in the title, you will be redirected to today's tasks.
 
 All options are on this home screen. Several icons have been used with images to make them more intuitive and simple to use. Each user will be able to view only their tasks. For this reason, there is a registration of users.
 
-The task will be permanently deleted from the database.
+
 
 
 
 ![Screenshot from 2021-12-19 19-58-54](https://user-images.githubusercontent.com/92978761/146686237-97771b60-d921-4f13-b14b-eb64ef87c2f5.png)
 
 
+![Screenshot from 2021-12-19 19-58-54](https://user-images.githubusercontent.com/92978761/146686382-f10a6684-372f-4ed2-ad55-37b5e64dda79.png)
 
+Each route checks if the user is authenticated. Once logged in you will remain logged in, internally who is using the web page is saved.
+Database stores all users and tasks. Important: The password is saved in the hashed database to improve website security. The table 'tasks' uses foreign keys to related users.
+
+
+5. Logout:
+To exit the web page just go to the "log out" option at the page header.
+# Usage
+To run the app :
+
+    1. install python3.
+    2. install flask , pip3 install flask.
+    3. run the command python3 app.py.
+
+That's all enjoy!.
 
 
 
