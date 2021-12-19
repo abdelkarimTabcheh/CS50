@@ -31,13 +31,41 @@ This is my last project for the cs50 Introduction to Computer Science (https://c
 The site contains 5 tracks or pages:
 
 1. A register route, where you can register for a new account by applying form (username/password).
+You need to enter these fields:
+
+    Name
+    Username: it is check if already exist a user with de same name. Only lowercase characters are accepted. Numbers and symbols are not allowed.
+    Password: it is checked to match.
 
 ![Screenshot from 2021-12-14 20-30-27](https://user-images.githubusercontent.com/92978761/146683835-22c6a94e-7f75-4fc2-8cdd-9213c2c84513.png)
 
 
 2. A login page, will check if the username and password match then creates a session for the user.
 
+![Screenshot from 2021-12-14 20-29-59](https://user-images.githubusercontent.com/92978761/146684190-0cce8264-ba81-4874-ad23-edee13f656e1.png)
 
 
+3.  After logging in, the main screen opens, on it, you will find the date and all the tasks related to that date and the logged-in user. On this screen you can:
 
-3. 
+    Registering new tasks:
+ You can record all tasks for that day or another day in the "New Task" option. A new screen for this recording will open with two fields: task name and date. The date will be suggested by the date depicted on the home screen. The tasks will be added to the end of the list.
+    Prioritize tasks (top task in the list) :
+  Important: Completed tasks are considered.
+Deprioritizing tasks (below the task in the list) : 
+Important: Completed tasks are considered.
+    Mark "done":
+To finish the task by marking "Done" on the screen.
+    Mark Not Done: Reopens the task, and removes the mark on the screen.
+    You can delete tasks:
+The task will be permanently deleted from the database.
+Edit tasks:
+ In this option, you can edit the date or name of the task. The same New Task screen will open with the data already filled in.
+    Check other day's assignments: you can browse between dates.
+    Show only undone tasks.
+    View all tasks daily.
+
+By clicking on the "TASKS" icon in the title, you will be redirected to today's tasks.
+
+All options are on this home screen. Several icons have been used with images to make them more intuitive and simple to use. Each user will be able to view only their tasks. For this reason, there is a registration of users.
+
+The task will be permanently deleted from the database.
