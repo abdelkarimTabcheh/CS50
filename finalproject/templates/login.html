@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/login" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" pattern="[a-z\s]+$" name="username" placeholder="Username" type="text" required title="Only lowercase letters between a e z">
+        </div>
+        <div class="form-group">
+            <input name="password" autofocus class="form-control" placeholder="Password" type="password" required>
+        </div>
+
+        {% if erro %}
+            <div class="alert alert-danger" role="alert">
+                <strong>Error:</strong> {{ erro }}
+            </div>
+            <br>
+        {% endif %}
+
+        <button class="btn btn-dark" type="submit">Log In</button>
+    </form>
+{% endblock %}
