@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post">
+        {% if erro == 'login' %}
+            <div class="alert alert-danger" role="alert">
+                <strong>Error:</strong> User already registered . <a href="/login" class="alert-link">Log in</a>.
+            </div>
+            <br>
+        {% elif erro %}
+            <div class="alert alert-danger" role="alert">
+                <strong>Error:</strong> {{ erro }}
+            </div>
+            <br>
+        {% endif %}
+
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" pattern="[a-z\s]+$" name="username" placeholder="Username" type="text" required title="Only lowercase letters between a e z">
+        </div>
+        <div class="form-group">
+            <input name="password" autofocus class="form-control" placeholder="Password" type="password" required>
+        </div>
+        <div class="form-group">
+            <input name="confirmation" autofocus class="form-control" placeholder="Password (Again)" type="password" required>
+        </div>
+
+        <button class="btn btn-dark" type="submit">Register</button>
+
+    </form>
+{% endblock %}
