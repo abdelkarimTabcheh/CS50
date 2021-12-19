@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link href="/static/style.css" rel="stylesheet">
+        <link href="/static/project.ico" rel="icon">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>PLANNING: {% block title %}{% endblock %}</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-light" style="background-color: #8B0000;">
+            <a class="navbar-brand" style="color: #D3D3D3" href="/">TASKS</a>
+
+            {% if session.user_id %}
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+                </ul>
+            {% else %}
+                <ul class="nav justify-content-end">
+                    <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">Log In</a></li>
+                </ul>
+            {% endif %}
+        </nav>
+
+
+        <main class="principal">
+            {% block main %}{% endblock %}
+        </main>
+    </body>
+</html>
