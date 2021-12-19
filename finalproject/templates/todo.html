@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Tasks
+{% endblock %}
+
+{% block main %}
+     <form action="/" method="post">
+        <table class="todo">
+            <thead>
+                <tr>
+                    <th>
+                        <button class="btn btn-light" type="submit" value = "ant" name="ant" title="Last day"><img src="/static/ant.png" width="20" height="20"></button>
+                        <input autocomplete="off" autofocus class="form-control" name="date" type="dates" value= "{{ date }}" required>
+                        <button class="btn btn-dark" type="submit" value="btdata" name="btdata">RI</button>
+                        <button class="btn btn-light" type="submit" value = "seg" name="seg" title="Following day"><img src="/static/seg.png" width="20" height="20"></button>
+
+                        <button class="btn btn-dark" type="submit" value = "include" name="include" style="float: right;margin: 0 10px"> Newtask </button>
+
+                        <button class="btn btn-light" type="submit" value = "Hide" name="Hide" style="float: right;margin: 0 10px" title="Hide done tasks">
+                            {% if show == 'S' %}
+                                <img src="/static/hidden.png" width="20" height="20">
+                            {% else %}
+                                <img src="/static/show.png" width="20" height="20">
+                            {% endif %}
+                        </button>
+                        <p hide>
+                            <input autocomplete="off" autofocus class="form-control" name="show" type="text" value= "{{ show }}">
+                        </p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for todo in todo %}
+                    <tr>
+                        <td>
+                            <button class="btn btn-light" type="submit" value = "Up{{ todo.id }}" name="up" title="Up the task"><img src="/static/up.png" width="20" height="20"></button>
+                            <button class="btn btn-light" type="submit" value = "down{{ todo.id }}" name="down" title="Down the task"><img src="/static/down.png" width="20" height="20"></button>
+                            <button class="btn btn-light" type="submit" value = "done{{ todo.id }}" name="done" title="Mark task as done"><img src="/static/done.png" width="20" height="20"></button>
+                            <button class="btn btn-light" type="submit" value = "undone{{ todo.id }}" name="undone" title="Mark task as undone"><img src="/static/undone.jpg" width="20" height="20"></button>
+
+                            {% if todo.done == 'S' %}
+                                <strike>
+                            {% endif %}
+
+                            {{ todo.task }}
+
+                            {% if todo.done == 'S' %}
+                                </strike>
+                            {% endif %}
+
+                            <button class="btn btn-light" type="submit" value = "change{{ todo.id }}" name="change" style="float: right;margin: 0 0px" title="Change the task"><img src="/static/edit.png" width="20" height="20"></button>
+                            <button class="btn btn-light" type="submit" value = "exclude{{ todo.id }}" name="exclude" style="float: right;margin: 0 10px" title="Delete the task"><img src="/static/excludes.png" width="20" height="20"></button>
+
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </form>
+
+{% endblock %}
