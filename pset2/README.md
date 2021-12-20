@@ -7,7 +7,7 @@ $ ./readability
 Text: Congratulations! Today is your day. You're off to Great Places! You're off and away!
 Grade 3
 
-## Substitution.c
+## Caesar.c
 A program that implements a substitution cipher.
 
 ### Example
