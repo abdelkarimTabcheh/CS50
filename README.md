@@ -4,7 +4,7 @@ hello all, this blog is about what i learned throught my walk in CS50 and my fin
 # What is CS50?
 CS50 is probably the most popular of all programming courses, especially for beginners.
 In 10 weeks, students learn different topics: Scratch, C, Arrays, Data Structures, Algorithms, Python, SQL, front-end and back-end, every week you learn to solve Labs and some problems.
-At the end of the course, we have you have to create your final project.
+At the end of the course, you have to create your final project.
 # CS50 Course Content
 1. Week 0: Computer science basics(Binary, what is an algorithm, Scratch...)
 2. Week 1 --> Week 5: Everything you will learn in these five weeks, you will apply in C, 
