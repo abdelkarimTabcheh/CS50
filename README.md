@@ -15,4 +15,11 @@ In these weeks, you will find it difficult to solve problems if the information 
 5. Week 8: In this week you will learn the basics of the web (HTTP, TCP/IP...) and how to create a simple website using HTML, CSS, and JavaScript with some bootstrap...
 6. Week 9: This week you will learn about Frameworks, Flask in particular, and learn how to create a fully functional website using python-flask, in addition to what you learned in the previous weeks (SQLite, HTML, Js...).
 Solving this problem will be very interesting because you have to use everything you learned in the course.
+# Usage
+To run the app :
+
+    1. install python3
+    2. install flask 
+    3. run the command python3 app.py
+
  
