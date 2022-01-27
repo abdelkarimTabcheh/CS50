@@ -21,7 +21,7 @@ You need to enter these fields:
       Password: it is checked to match.
 
 
-![Screenshot from 2021-12-14 20-30-27](https://user-images.githubusercontent.com/92978761/146683835-22c6a94e-7f75-4fc2-8cdd-9213c2c84513.png)
+![Screenshot from 2022-01-27 18-23-10](https://user-images.githubusercontent.com/92978761/151401244-536ac9da-413c-4cf7-962f-733b884e6eed.png)
 
 
 
@@ -29,8 +29,7 @@ You need to enter these fields:
 
 
 
-![Screenshot from 2021-12-14 20-29-59](https://user-images.githubusercontent.com/92978761/146684190-0cce8264-ba81-4874-ad23-edee13f656e1.png)
-
+![Screenshot from 2022-01-27 18-23-38](https://user-images.githubusercontent.com/92978761/151401535-a16cca70-e08b-43c5-bf21-568b17abe425.png)
 
 
 
@@ -44,22 +43,36 @@ You need to enter these fields:
  The date will be suggested by the date depicted on the home screen.
  
  The tasks will be added to the end of the list.
+ ![Screenshot from 2022-01-27 18-25-55](https://user-images.githubusercontent.com/92978761/151402625-eb6348e0-a7b6-4e12-b9be-9fcd477438ac.png)
  
 
-    Prioritize tasks (top task in the list) :
-  Completed tasks are considered.
-Deprioritizing tasks (below the task in the list) : 
-  Completed tasks are considered.
-    Mark "done":
+   Prioritize tasks (top task in the list) :
+   
+Completed tasks are considered.
+
+Deprioritizing tasks (below the task in the list) :
+
+Completed tasks are considered.
+
+  Mark "done":
 To finish the task by marking "Done" on the screen.
-    Mark Not Done: Reopens the task, and removes the mark on the screen.
+
+
+![Screenshot from 2022-01-27 18-46-57](https://user-images.githubusercontent.com/92978761/151404650-7515cd54-07ad-46c3-a265-8de02e3748ba.png)
+
+  Mark Not Done:
+  
+  Reopens the task, and removes the mark on the screen.
+    
 Edit tasks:
+
  In this option, you can edit the date or name of the task. The same New Task screen will open with the data already filled in.
     Check other day's assignments: you can browse between dates.
     Show only undone tasks.
     View all tasks daily.
 
-    You can delete tasks:
+   You can delete tasks:
+   
 The task will be permanently deleted from the database.
 
 By clicking on the "TASKS" icon in the title, you will be redirected to today's tasks.
@@ -70,10 +83,7 @@ All options are on this home screen. Several icons have been used with images to
 
 
 
-![Screenshot from 2021-12-19 19-58-54](https://user-images.githubusercontent.com/92978761/146686237-97771b60-d921-4f13-b14b-eb64ef87c2f5.png)
-
-
-![Screenshot from 2021-12-19 19-58-54](https://user-images.githubusercontent.com/92978761/146686382-f10a6684-372f-4ed2-ad55-37b5e64dda79.png)
+![Screenshot from 2022-01-27 18-24-37](https://user-images.githubusercontent.com/92978761/151403794-8a4132e4-47fc-405c-af8b-e16c516986af.png)
 
 Each route checks if the user is authenticated. Once logged in you will remain logged in, who is using the web page is saved.
 Database stores all users and tasks. Important: The password is saved in the hashed database to improve website security. The table 'tasks' uses foreign keys to related users.
