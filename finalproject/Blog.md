@@ -1,98 +1,60 @@
-# A TODO app with flask
- This is my last project for the cs50 Introduction to Computer Science (https://cs50.harvard.edu/college/2021/fall) a tasks recording website with python-flask.
+# A To-Do App with Flask
 
-The site contains 5 tracks or pages:
+This is my final project for [CS50's Introduction to Computer Science](https://cs50.harvard.edu/college/2021/fall), a task management website developed using Python and Flask. The application is designed to help users efficiently record and manage their tasks.
 
+## Project Overview
 
-This is a web page where the user records the tasks to be completed. You can add tasks and delete tasks, it's very easy to use.
-I did this project because the organization of tasks is very important not for every programmer, but for every human.
+The site features five main pages:
 
-Technologies used:
+1. **Register Page**
+   - **Description**: Users can create a new account by filling out a registration form.
+   - **Fields**:
+     - **Name**: The user's full name.
+     - **Username**: The application checks for existing usernames and only accepts lowercase characters. Numbers and symbols are not allowed.
+     - **Password**: The password is validated to ensure it matches the confirmation field.
+   - **Screenshot**:
+     ![Register Page](https://user-images.githubusercontent.com/92978761/151401244-536ac9da-413c-4cf7-962f-733b884e6eed.png)
 
-    SQL
-    Python
-    Flask
+2. **Login Page**
+   - **Description**: Users can log in by entering their username and password. The application verifies credentials and creates a session for the user.
+   - **Screenshot**:
+     ![Login Page](https://user-images.githubusercontent.com/92978761/151401535-a16cca70-e08b-43c5-bf21-568b17abe425.png)
 
-1. A register route, where you can register for a new account by applying form (username/password).
-You need to enter these fields:
+3. **Main Screen**
+   - **Description**: Upon logging in, users are directed to the main screen, where they can view and manage tasks for the current date or any other date. Features include:
+     - **Adding New Tasks**: Users can add new tasks for the current day or a different date. The "New Task" option opens a form with fields for task name and date.
+       - **Screenshot**:
+         ![Add New Task](https://user-images.githubusercontent.com/92978761/151402625-eb6348e0-a7b6-4e12-b9be-9fcd477438ac.png)
+     - **Prioritizing Tasks**: Tasks can be moved to the top of the list for higher priority.
+     - **Deprioritizing Tasks**: Completed tasks can be moved to the bottom of the list.
+     - **Marking Tasks as Done**: Tasks can be marked as completed.
+       - **Screenshot**:
+         ![Mark Task Done](https://user-images.githubusercontent.com/92978761/151404650-7515cd54-07ad-46c3-a265-8de02e3748ba.png)
+     - **Reopening Tasks**: Tasks marked as done can be reopened and edited.
+     - **Editing Tasks**: Modify task details such as name or date using the same form used for adding tasks.
+     - **Viewing Tasks**: Browse tasks by date, show only undone tasks, or view all daily tasks.
+     - **Deleting Tasks**: Remove tasks permanently from the database.
 
-      Name
-      Username: the application check if already exist a user with de same name, Only lowercase characters are accepted. Numbers and symbols are not allowed.
-      Password: it is checked to match.
+   - **Screenshot**:
+     ![Main Screen](https://user-images.githubusercontent.com/92978761/151403794-8a4132e4-47fc-405c-af8b-e16c516986af.png)
 
+4. **Logout**
+   - **Description**: Users can log out of the application by selecting the "log out" option in the page header.
 
-![Screenshot from 2022-01-27 18-23-10](https://user-images.githubusercontent.com/92978761/151401244-536ac9da-413c-4cf7-962f-733b884e6eed.png)
+## Technologies Used
 
+- **SQL**: Used for managing the database, including user accounts and tasks. Passwords are securely hashed in the database to enhance security.
+- **Python**: The primary language used for developing the application logic.
+- **Flask**: A lightweight web framework that handles the application’s routing and server-side functionality.
 
+## Security and User Management
 
-2. A login page, will check if the username and password match then creates a session for the user.
+- **Authentication**: Each route checks if the user is authenticated. Once logged in, users remain logged in until they log out.
+- **User-Specific Data**: Each user can only view their own tasks. The application uses foreign keys in the database to associate tasks with users.
 
+## Conclusion
 
+Thank you for exploring my To-Do List application. I hope this project demonstrates the practical application of the skills I acquired during CS50. If you have any questions or feedback, feel free to reach out!
 
-![Screenshot from 2022-01-27 18-23-38](https://user-images.githubusercontent.com/92978761/151401535-a16cca70-e08b-43c5-bf21-568b17abe425.png)
-
-
-
-3.  After logging in, the main screen opens, on it, you will find the date and all the tasks related to that date and the logged-in user. On this screen you can:
-
-    Registering new tasks:
- You can record all tasks for that day or another day in the "New Task" option.
- 
- A new screen for this recording will open with two fields: task name and date.
- 
- The date will be suggested by the date depicted on the home screen.
- 
- The tasks will be added to the end of the list.
- ![Screenshot from 2022-01-27 18-25-55](https://user-images.githubusercontent.com/92978761/151402625-eb6348e0-a7b6-4e12-b9be-9fcd477438ac.png)
- 
-
-   Prioritize tasks (top task in the list) :
-   
-Completed tasks are considered.
-
-Deprioritizing tasks (below the task in the list) :
-
-Completed tasks are considered.
-
-  Mark "done":
-To finish the task by marking "Done" on the screen.
-
-
-![Screenshot from 2022-01-27 18-46-57](https://user-images.githubusercontent.com/92978761/151404650-7515cd54-07ad-46c3-a265-8de02e3748ba.png)
-
-  Mark Not Done:
-  
-  Reopens the task, and removes the mark on the screen.
-    
-Edit tasks:
-
- In this option, you can edit the date or name of the task. The same New Task screen will open with the data already filled in.
-    Check other day's assignments: you can browse between dates.
-    Show only undone tasks.
-    View all tasks daily.
-
-   You can delete tasks:
-   
-The task will be permanently deleted from the database.
-
-By clicking on the "TASKS" icon in the title, you will be redirected to today's tasks.
-
-All options are on this home screen. Several icons have been used with images to make them more intuitive and simple to use. Each user will be able to view only their tasks. For this reason, there is a registration of users.
-
-
-
-
-
-![Screenshot from 2022-01-27 18-24-37](https://user-images.githubusercontent.com/92978761/151403794-8a4132e4-47fc-405c-af8b-e16c516986af.png)
-
-Each route checks if the user is authenticated. Once logged in you will remain logged in, who is using the web page is saved.
-Database stores all users and tasks. Important: The password is saved in the hashed database to improve website security. The table 'tasks' uses foreign keys to related users.
-
-
-5. Logout:
-To exit the web page just go to the "log out" option at the page header.
-
-That's all enjoy!
-
-
+Enjoy using the app!
 
